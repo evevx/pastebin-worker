@@ -12,10 +12,6 @@
 <body>
 <div class='px-3 my-5 markdown-body'>
     <h1>Yet Another Pastebin</h1>
-    <p>This is an open source pastebin deployed on Cloudflare Workers. </p>
-    <p><b>Usage</b>: paste any text here, submit, then share it with URL. </p>
-    <p><b>Warning</b>: only for temporary share, files will be deleted without notice!</p>
-    <p>Refer to <a href='{{REPO}}'>GitHub</a> for more details.</p>
 
     <div id='paste-input-panel'>
         <div id='paste-header'>
@@ -64,10 +60,10 @@
             <input type='radio' name='url-type' value='custom' id='paste-url-custom-radio'>
             <label for='paste-url-custom-radio' class='radio-label'>Set by your own</label>
             <div id='paste-url-input-wrapper'>
-                <span id='paste-url-input-prefix'>{{BASE_URL}}/~</span>
-                <input type='text' id='paste-custom-url-input' minlength='3' name='custom-url'>
+                <span id='paste-url-input-prefix'>{{BASE_URL}}/</span>
+                <input type='text' id='paste-custom-url-input' minlength='1' name='custom-url'>
             </div>
-            <span class='small-label'>Example: {{BASE_URL}}/~stocking</span>
+            <span class='small-label'>Example: {{BASE_URL}}/stocking</span>
         </div>
         <div class='label-line'>
             <input type='radio' name='url-type' value='admin' id='paste-url-admin-radio'>

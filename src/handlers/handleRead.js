@@ -29,7 +29,7 @@ export async function handleGet(request, env, ctx) {
   }
 
   // return the editor for admin URL
-  const staticPageContent = getStaticPage((passwd.length > 0) ? "/" : url.pathname, env)
+  const staticPageContent = getStaticPage((passwd.length > 0) ? "/" : url.pathname, env, url.origin)
   if (staticPageContent) {
     // access to all static pages requires auth
     const authResponse = verifyAuth(request, env)
